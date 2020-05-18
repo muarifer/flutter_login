@@ -9,7 +9,7 @@ Size getWidgetSize(GlobalKey key) {
 
 Flushbar showSuccessToast(BuildContext context, String message) {
   return Flushbar(
-    title: 'Success',
+    title: 'Başarılı',
     message: message,
     icon: Icon(
       Icons.check,
@@ -26,7 +26,7 @@ Flushbar showSuccessToast(BuildContext context, String message) {
 
 Flushbar showErrorToast(BuildContext context, String message) {
   return Flushbar(
-    title: 'Error',
+    title: 'Hata',
     message: message,
     icon: Icon(
       Icons.error,
