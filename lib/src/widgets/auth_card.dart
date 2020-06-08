@@ -523,6 +523,7 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
 
   Widget _buildNameField(double width, LoginMessages messages, Auth auth) {
     return AnimatedTextFormField(
+      key: Key('flutter_login_name'),
       controller: _nameController,
       width: width,
       loadingController: _loadingController,
@@ -541,6 +542,7 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
 
   Widget _buildPasswordField(double width, LoginMessages messages, Auth auth) {
     return AnimatedPasswordTextFormField(
+      key: Key('flutter_login_password'),
       animatedWidth: width,
       loadingController: _loadingController,
       interval: _passTextFieldLoadingAnimationInterval,
@@ -564,6 +566,7 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
 
   Widget _buildConfirmPasswordField(double width, LoginMessages messages, Auth auth) {
     return AnimatedPasswordTextFormField(
+      key: Key('flutter_login_confirm_password'),
       animatedWidth: width,
       enabled: auth.isSignup,
       loadingController: _loadingController,
@@ -595,6 +598,7 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
       offset: .5,
       curve: _textButtonLoadingAnimationInterval,
       child: FlatButton(
+        key: Key('flutter_login_forgot_password'),
         child: Text(
           messages.forgotPasswordButton,
           style: theme.textTheme.body1,
@@ -613,6 +617,7 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
     return ScaleTransition(
       scale: _buttonScaleAnimation,
       child: AnimatedButton(
+        key: Key('flutter_login_submit_password'),
         controller: _submitController,
         text: auth.isLogin ? messages.loginButton : messages.signupButton,
         onPressed: _submit,
