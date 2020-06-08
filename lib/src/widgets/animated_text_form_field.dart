@@ -204,6 +204,7 @@ class _AnimatedTextFormFieldState extends State<AnimatedTextFormField> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     Widget textField = TextFormField(
+      key: widget.key,
       controller: widget.controller,
       focusNode: widget.focusNode,
       decoration: _getInputDecoration(theme),
@@ -293,6 +294,7 @@ class _AnimatedPasswordTextFormFieldState
   @override
   Widget build(BuildContext context) {
     return AnimatedTextFormField(
+      key: widget.key,
       interval: widget.interval,
       loadingController: widget.loadingController,
       inertiaController: widget.inertiaController,

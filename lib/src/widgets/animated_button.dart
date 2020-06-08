@@ -198,6 +198,7 @@ class _AnimatedButtonState extends State<AnimatedButton>
                 : 0,
           ),
           child: InkWell(
+            key: Key(widget.text),
             onTap: !_isLoading ? widget.onPressed : null,
             splashColor: buttonTheme.splashColor,
             customBorder: buttonTheme.shape,
